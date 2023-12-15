@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.newItemEntry,
+.listContainer {
+  margin-bottom: 20px;
+}
+
+.newItemEntry__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newItemEntry__input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+}
+
+.button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #45a049;
+}
+
+.listTitle__button {
+  background: #f44336;
+  margin-left: 10px;
+}
+
+.listTitle__button:hover {
+  background: #d32f2f;
+}
+
+.listItems {
+  list-style: none;
+}
+
+.item {
+  background: #333;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.item:hover {
+  background: #444;
+}
+
+/* Apply strikethrough when the checkbox is checked */
+.item input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #757575; /* Dim the text color to indicate the item is completed */
+}
+
+.item > label {
+  flex-grow: 1;
+}
+
+.item > .delete {
+  background: none;
+  border: none;
+  color: white;
+  padding-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.item > .delete:hover {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.listTitle {
+  display: flex;
+  justify-content: space-between; /* This will place the title on the left and the button on the right */
+  align-items: center; /* Aligns items vertically in the center */
+}
